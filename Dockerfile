@@ -9,6 +9,6 @@ RUN mkdir -p /var/www/html/wp-content && \
     chown -R www-data:www-data /var/www/html/wp-content && \
     chmod -R 755 /var/www/html/wp-content
 
-COPY config/wp-config.php /var/www/html/wp-config.php
+COPY wordpress/wp-config.php /var/www/html/wp-config.php
 
 CMD ["docker-entrypoint.sh", "apache2-foreground"]
