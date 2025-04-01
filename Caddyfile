@@ -1,0 +1,12 @@
+{
+    email mat@gitchegumi.com
+}
+
+dev.gitchegumi.com {
+    reverse_proxy wordpress:80 {
+	header_up X-Forwarded-Proto {scheme}
+	header_up Host {host}
+    }
+
+    encode gzip
+}

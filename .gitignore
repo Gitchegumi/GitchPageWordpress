@@ -5,30 +5,21 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-.env
 
-# Configuration
-wp-config.php
+wordpress/wp-admin/
+wordpress/wp-includes/
+wordpress/index.php
+wordpress/xmlrpc.php
+wordpress/wp-*.php
+!wordpress/wp-config.php
+wordpress/license.txt
+wordpress/readme.html
 
 # Example themes
-/wp-content/themes/twenty*/
+# wordpress/wp-content/themes/twenty*/
 
 # Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
+wordpress/wp-content/plugins/hello.php
 
 # Log files
 *.log
@@ -47,3 +38,23 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# Docker volumes
+db_data/
+caddy_data/
+caddy_config/
+
+# Docker Compose overrides / environment files
+.env
+.env.*
+
+# Certbot SSL and account keys
+certbot/
+
+# Editor swap/temp files
+*.swp
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
